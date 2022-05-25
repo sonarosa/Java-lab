@@ -1,17 +1,20 @@
-import java.util.Scanner;
+import java.util.*;
+
 public class reverse
 {
-	public static void main(String[] args) {
-	   int rev=0,rem;
-	    Scanner sc= new Scanner(System.in); 
-	    System.out.println("Enter the  number:\n");
-	    int n=sc.nextInt();
-	    while(n!=0)
-           {rem=n%10;
-            rev=rev*10+rem;
-            n=n/10;
-
-	   }	
-         System.out.println("Reverse of the number=\t"+rev);
-	}
+public static void main(String[] args) 
+{ 
+	Scanner sc = new Scanner(System.in); 
+	String num; 
+	System.out.println("Enter a number : "); 
+	num = sc.nextLine(); 
+	 
+	int i; 
+	String numRev = ""; 
+	for(i=(num.length()-1) ; i>=0 ; i--) 
+	{ 
+		numRev = numRev + String.valueOf(num.charAt(i)); 
+	} 
+	System.out.println("Reverse number is : " + numRev); 
+} 
 }
