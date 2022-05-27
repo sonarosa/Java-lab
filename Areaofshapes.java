@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Main
+public class Areaofshapes
 {
 	public static void main(String[] args) {
 	    int sum;
@@ -8,27 +8,27 @@ public class Main
 	    System.out.print("1.Area of square\n");
 	    System.out.print("2.Area of rectangle\n");
 	    System.out.print("3.Area of circle\n");
-	    System.out.print("Enter your choice:");
-	    int choice=sc.nextInt();
+	    System.out.print("Enter your choice:"+args[0]+"\n");
+	    int choice=Integer.parseInt(args[0]);
 	    switch(choice)
 	    {
 	   case 1:
 	      
 	       
-	       System.out.print("-->Enter side of the square:");
-	        int s=sc.nextInt();
+	       System.out.print("-->Enter side of the square:"+args[1]+"\n");
+	        int s=Integer.parseInt(args[1]);
 	        computeArea(s);
 	        break;
 	   case 2:
-	       System.out.print("-->Enter length of the rectangle:");
-	       int l=sc.nextInt();
-	       System.out.print("-->Enter breadth of the rectangle:");
-	       int b=sc.nextInt();
+	       System.out.print("-->Enter length of the rectangle:"+args[1]+"\n");
+	       int l=Integer.parseInt(args[1]);
+	       System.out.print("-->Enter breadth of the rectangle:"+args[2]+"\n");
+	       int b=Integer.parseInt(args[2]);
 	       computeArea(l,b);
 	       break;
 	   case 3:
-	        System.out.print("-->Enter radius of the circle");
-	        double r=sc.nextDouble();
+	        System.out.print("-->Enter radius of the circle"+args[1]+"\n");
+	        double r=Integer.parseInt(args[1]);
 	        computeArea(r);
 	        break;
 	   default:
@@ -54,4 +54,5 @@ System.out.println("Area of circle of given radius:"+areac);
 }
 
 }
+
 
